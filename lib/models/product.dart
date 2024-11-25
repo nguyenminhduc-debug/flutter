@@ -1,7 +1,7 @@
 class Product {
   final String? image, title, description, category, brand;
   final List<dynamic>? listImage;
-  final price;
+  final int price;
 
   final id;
 
@@ -10,7 +10,7 @@ class Product {
         this.title = "",
         this.brand = "",
         this.category = "",
-        this.price = 0.0,
+        this.price = 0,
         required this.description,
         this.listImage,
         this.id = 0});
@@ -21,7 +21,7 @@ class Product {
       title: json['title'],
       brand: json['brand'],
       category: json['category'],
-      description: json['description'],
+      description: json['descreption'],
       price: json['price'],
       image: json['image'],
       listImage: json['list_image']
