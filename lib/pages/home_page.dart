@@ -354,14 +354,12 @@ class _HomePageState extends State<HomePage> {
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
-                          childAspectRatio: 0.7,
+                          childAspectRatio: 0.65,
                           crossAxisSpacing: 0.0,
                           mainAxisSpacing: 0.0,
                         ),
                         itemBuilder: (BuildContext context, int index) {
-                          return ProductCard(lst: lst, index: index, width: size.width,
-                            height: size.width * 0.45,
-                          );
+                          return ProductCard(lst: lst, index: index);
                         });
                   }
                 },

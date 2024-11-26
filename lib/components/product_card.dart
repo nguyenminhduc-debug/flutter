@@ -9,10 +9,10 @@ import '../pages/product_detail_page.dart';
 class ProductCard extends StatelessWidget {
   final List<Product> lst;
   final int index;
-  final double width;
+  final double? width;
   final double? height;
 
-  const ProductCard({super.key, required this.lst, required this.index, required this.width,
+  const ProductCard({super.key, required this.lst, required this.index, this.width,
     this.height
   });
 
@@ -29,9 +29,9 @@ class ProductCard extends StatelessWidget {
         elevation: 5.0,
         child: Column(
           children: [
-            SizedBox(
-              width: width,
-              height: height,
+            Expanded(
+              //width: width,
+              //height: height,
               child: Hero(
                 tag: "${lst[index].id}",
                 child: GestureDetector(
